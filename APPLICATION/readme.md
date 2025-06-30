@@ -1,7 +1,7 @@
 This folder contains the HTML templates used in the Flask web application for the project "Transfer Learning-Based Classification of Poultry Diseases for Enhanced Health Management."
 application files
 
-index.html
+poultry.html
 The main landing page where users can upload an image of a poultry bird for disease classification.
 
 predict.html
