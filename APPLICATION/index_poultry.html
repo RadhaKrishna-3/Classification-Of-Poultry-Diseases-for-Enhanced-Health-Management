@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PoultryDetect | Poultry Health Hub</title>
+    <style>
+        /* Reset some default styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #000;
+            color: #fff;
+            min-height: 100vh;
+            position: relative;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar styles */
+        nav {
+            background-color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #222;
+        }
+
+        nav .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #fff;
+            letter-spacing: 1.2px;
+            user-select: none;
+        }
+
+        nav ul.menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        nav ul.menu li a {
+            text-decoration: none;
+            color: #aaa;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav ul.menu li a:hover,
+        nav ul.menu li a.active {
+            color: #fff;
+        }
+
+        /* Social icons container */
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .social-icons a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #39b54a;
+        }
+
+        /* Main header text section */
+        header {
+            padding: 80px 20px 60px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.5;
+            font-weight: 600;
+            font-size: 2rem;
+            user-select: none;
+        }
+
+        /* Button style */
+        .btn-get-started {
+            background-color: #39b54a;
+            color: white;
+            font-size: 1rem;
+            padding: 11px 28px;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            font-weight: 700;
+            transition: background-color 0.3s ease;
+            user-select: none;
+        }
+
+        .btn-get-started:hover {
+            background-color: #2a7a32;
+        }
+
+        /* Gallery of images */
+        .gallery {
+            max-width: 960px;
+            margin: 0 auto 60px;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            padding: 0 10px;
+        }
+
+        .gallery img {
+            max-width: 220px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            user-select: none;
+            object-fit: cover;
+            height: 140px;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.07);
+            box-shadow: 0 8px 25px rgba(57, 181, 74, 0.6);
+        }
+
+        /* Scroll to top button */
+        #scrollTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #39b54a;
+            color: white;
+            cursor: pointer;
+            padding: 14px 18px;
+            border-radius: 50%;
+            font-size: 22px;
+            user-select: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        #scrollTopBtn:hover {
+            background-color: #2a7a32;
+        }
+
+        /* Responsive for smaller screens */
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.5rem;
+                padding: 50px 15px 40px;
+            }
+
+            .gallery {
+                gap: 12px;
+            }
+
+            .gallery img {
+                max-width: 140px;
+                height: 90px;
+            }
+        }
+    </style>
+    <!-- FontAwesome icons CDN for social media icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PoultryDetect</div>
+        <ul class="menu">
+            <li><a href="#" class="active">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">CONTACT</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="#" aria-label="Close Site">&times;</a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+    </nav>
+
+    <header>
+        <p>
+            Welcome to Poultry Health <br />
+            your comprehensive resource for poultry disease management and prevention.
+        </p>
+        <button class="btn-get-started">GET STARTED</button>
+    </header>
+
+    <section class="gallery" aria-label="Poultry disease images gallery">
+        
+        <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRecbVV9m7k3wZ2KimWcY8d81a_y4tdk1ErOjsf9Qmyv4_gfFv5" alt="Sick chicken lying down" />
+        <img src="https://imgs.search.brave.com/cpwDQ1bTupfgOQQu1YSju3g_pB8Q5Xnlyk8GImfyF8M/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9iaWct/cG91bHRyeS1yZWFy/aW5nLWZhcm0tMTU3/OTM2ODcuanBn" alt="Healthy chicken" />
+        <img src="https://imgs.search.brave.com/KCx9Y5dqlN0rL9H3zMFuszlnCXkB61SmYGd_1FIWnE8/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMuc3F1YXJlc3Bh/Y2UtY2RuLmNvbS9j/b250ZW50L3YxLzYy/YWE0MzdlODQ4NDFj/NDAzN2Y0ZTJkMC9m/NDUwYjM0MC00YmU3/LTQ3MDktOGY2ZC1j/MWUwNGYwNjMyOWIv/QmFja3lhcmQrY2hp/Y2tlbitjb29wK3Jl/dmVhbCsxNytjb3B5/LmpwZw" alt="Cartoon chicken coop" />
+    </section>
+
+    <button id="scrollTopBtn" title="Go to top">&#8679;</button>
+
+    <script>
+        // Scroll to top button functionality
+        const scrollBtn = document.getElementById("scrollTopBtn");
+
+        // Show the button when the user scrolls down 300px
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        // When the user clicks the button, scroll to the top smoothly
+        scrollBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+    </script>
+
+</body>
+</html>
